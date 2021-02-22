@@ -1,28 +1,23 @@
 import React, { FunctionComponent, useState } from 'react';
-import { Image, StyleSheet,TouchableOpacity, View } from 'react-native';
+import { StyleSheet,TouchableOpacity, View } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import Icons from 'react-native-vector-icons/dist/AntDesign';
-import { ApplicationState } from '../store'
 import { DoLogin } from '../store/ducks/actions'
-// import { login } from '../Services/api'
 import {useSelector, useDispatch} from 'react-redux';
+import Background from '../Components/Background';
+import ButtonCard from '../Components/ButtonCard';
+import Footer from '../Components/Footer';
 import {
   Container,
   Title,
   TitleCard,
   Description,
-  BackImage,
   Card,
   FormArea,
   FormLabel,
   FormInput,
-  Submit,
-  SubmitText,
-  Button,
   AlertText,
-  FooterText,
-  FooterLink,
-  LoginFeedback
+  LoginFeedback,
 } from '../Styles/StylesDefault'
 
 interface emailProps {
@@ -55,14 +50,7 @@ const LoginScreen: FunctionComponent = (navigation) => {
   }
 
   return (<>
-    <LinearGradient locations={[0, 0.6]} style={[styles.linearGradient, { zIndex: 2 }]} colors={['rgba(105, 57, 153, 0.2)', '#130525']}></LinearGradient>
-    <BackImage>
-      <Image
-        style={{ width: "100%" }}
-        resizeMode={'cover'}
-        source={require('../Assets/Images/background.png')}
-      />
-    </BackImage>
+    <Background/>
     <Container>
       <Card validation={{submitted:submitted, isValid: isValid}}>
         <TitleCard>
@@ -87,38 +75,17 @@ const LoginScreen: FunctionComponent = (navigation) => {
           {email.error ? <AlertText alert={email.error}>Digite um e-mail válido;</AlertText> : null}
           <FormLabel>senha</FormLabel>
           <FormInput placeholder={'*******'} secureTextEntry={true} onChangeText={(text:string) => setPassowrd(text)} />
-          {submitted && isValid ? <LoginFeedback style={{marginTop: 10, color: 'rgba(42, 232, 96, 1)', zIndex: 5}}>Login Efetuado</LoginFeedback > : null}
+          {submitted && isValid ? <LoginFeedback style={{marginTop: 10, color: 'rgba(66, 245, 96, 1)', zIndex: 5}}>Login Efetuado</LoginFeedback > : null}
           {submitted && isValid == false ? <LoginFeedback style={{marginTop: 10, color: 'rgba(255, 55, 127, 1)', zIndex: 5}}>Login Recusado</LoginFeedback>: null}
         </FormArea>
       </Card>
-      <Button>
-          <TouchableOpacity style={styles.button} onPress={() => submitForm()}>
-          <LinearGradient start={{ x: 0.25, y: 0.25 }} end={{ x: 1, y: 1.0 }} style={styles.linearGradient} colors={['#9D25B0', '#383E71']}></LinearGradient>
-            <Submit>
-              <SubmitText>entrar</SubmitText>
-            </Submit>
-          </TouchableOpacity>
-        </Button>
-        <View style={styles.footer}>
-          <FooterText>Esqueceu seu login ou senha?</FooterText>
-          <View style={styles.footerContent}>
-            <FooterText>Clique</FooterText>
-            <TouchableOpacity style={{ marginLeft: 5, zIndex: 10, }} onPress={() => { }}>
-              <FooterLink>aqui</FooterLink>
-            </TouchableOpacity>
-          </View>
-        </View>
+      <ButtonCard submitFunction={submitForm}/>
+      <Footer/>
     </Container>
   </>);
 };
 
 const styles = StyleSheet.create({
-  linearGradient: {
-    position: 'absolute',
-    flex: 1,
-    width: "100%",
-    height: "100%"
-  },
   formContainer: {
     position: 'relative',
   },
@@ -127,25 +94,6 @@ const styles = StyleSheet.create({
     bottom: 15,
     right: 17,
     zIndex: 2
-  },
-  button: {
-    position: 'relative',
-    left:0,
-    right:0,
-    width:"100%",
-    height:"100%",
-  },
-  footer: {
-    position: 'relative',
-    height: 40,
-    justifyContent:'center',
-    alignItems:'center',
-  },
-  footerContent: {
-    flex:1,
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
   },
   loginFeedback:{
     width:'100%',

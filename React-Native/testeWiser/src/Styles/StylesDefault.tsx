@@ -14,7 +14,7 @@ export const Card = styled.View`
   border-radius: 8px;
   padding-top:24px;
   padding-horizontal: 27px;
-  border-color: ${(props) => (props.validation.submitted ?(props.validation.isValid ? 'rgba(42, 232, 96, 1)': 'rgba(255, 55, 127, 1)'): 'rgba(255, 255, 255, 0)')}
+  border-color: ${(props) => (props.validation.submitted ?(props.validation.isValid ? 'rgba(66, 245, 96, 1)': 'rgba(255, 55, 127, 1)'): 'rgba(255, 255, 255, 0)')}
   border-width: 1px;
 `;
 
