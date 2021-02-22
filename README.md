@@ -42,23 +42,23 @@ E fazer o download da aplicação **ANDROID**  <a href="#" target="_blank">aqui.
 
 - Login View
 <h1 align="center">
-    <img alt="Aircnc" src="./assets/screenshots/Screenshot_1614003352.png" width="250px" />
+    <img alt="login" src="./assets/screenshots/Screenshot_1614003352.png" width="250px" />
 </h1>
 
 
 - Email Errado
 <h1 align="center">
-    <img alt="Aircnc" src="./assets/screenshots/Screenshot_1614003374.png" width="250px" />
+    <img alt="wrong-email" src="./assets/screenshots/Screenshot_1614003374.png" width="250px" />
 </h1>
 
 - Autenticação válida
 <h1 align="center">
-    <img alt="Aircnc" src="./assets/screenshots/Screenshot_1614003395.png" width="250px" />
+    <img alt="valid" src="./assets/screenshots/Screenshot_1614003395.png" width="250px" />
 </h1>
 
 - Autenticação inválida
 <h1 align="center">
-    <img alt="Aircnc" src="./assets/screenshots/Screenshot_1614003399.png" width="250px" />
+    <img alt="invalid" src="./assets/screenshots/Screenshot_1614003399.png" width="250px" />
 </h1>
 
 
