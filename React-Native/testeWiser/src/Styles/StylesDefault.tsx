@@ -120,9 +120,8 @@ export const Button = styled.View`
     justify-content: center;
     align-items: center;
     border-radius: 8px;
-    border: 1px solid
     position: relative;
-    top: -36px
+    top: -40px
     background: rgba(255, 255, 255, 1);
     overflow: hidden;
     z-index:5;
