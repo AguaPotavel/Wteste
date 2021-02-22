@@ -1,8 +1,7 @@
 import styled from 'styled-components/native';
 
-
 const Text = styled.Text`
-  font-family: "Montserrat-Regular";
+  font-family: 'Montserrat-Regular';
 `;
 
 export const Card = styled.View`
@@ -14,7 +13,12 @@ export const Card = styled.View`
   border-radius: 8px;
   padding-top:24px;
   padding-horizontal: 27px;
-  border-color: ${(props) => (props.validation.submitted ?(props.validation.isValid ? 'rgba(66, 245, 96, 1)': 'rgba(255, 55, 127, 1)'): 'rgba(255, 255, 255, 0)')}
+  border-color: ${(props) =>
+    props.validation.submitted
+      ? props.validation.isValid
+        ? 'rgba(66, 245, 96, 1)'
+        : 'rgba(255, 55, 127, 1)'
+      : 'rgba(255, 255, 255, 0)'}
   border-width: 1px;
 `;
 
@@ -31,14 +35,13 @@ export const Container = styled.View`
     padding-top: 60px;
 `;
 
-
 export const Title = styled(Text)`
   position: relative;
   font-size: 24px;
   line-height: 32px;
   font-weight: 400;
   color: rgba(56, 62, 113, 1);
-  text-align: center 
+  text-align: center;
 `;
 
 export const LoginFeedback = styled(Text)`
@@ -47,8 +50,8 @@ export const LoginFeedback = styled(Text)`
   line-height: 28px;
   font-weight: 400;
   color: rgba(56, 62, 113, 1);
-  text-align: center`;
-
+  text-align: center;
+`;
 
 export const Description = styled(Text)`
   position: relative;
@@ -60,17 +63,17 @@ export const Description = styled(Text)`
 `;
 
 export const TitleCard = styled.View`
-    position: relative;
-    justify-content:center;
-    align-items:center;
-    height: 64px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 64px;
 `;
 
 export const BackImage = styled.View`
-    position: absolute;
-    justify-content: center;
-    background: rgba(152, 159, 219, 1);
-    width: 100%
+  position: absolute;
+  justify-content: center;
+  background: rgba(152, 159, 219, 1);
+  width: 100%;
 `;
 
 export const TextInput = styled.TextInput`
@@ -81,8 +84,8 @@ export const TextInput = styled.TextInput`
 `;
 
 export const FormArea = styled.View`
-    width: 256px;
-    margin-bottom: 56px;
+  width: 256px;
+  margin-bottom: 56px;
 `;
 
 export const FormLabel = styled(Text)`
@@ -96,10 +99,11 @@ export const FormLabel = styled(Text)`
 `;
 
 export const FormInput = styled.TextInput`
-    border:1px solid;
-    border-radius: 8px;
-    padding-left:20px;
-    border-color: ${(props) => (props.formatError ? 'rgba(255, 55, 127, 1)': 'rgba(152, 159, 219, 1)')};
+  border: 1px solid;
+  border-radius: 8px;
+  padding-left: 20px;
+  border-color: ${(props) =>
+    props.formatError ? 'rgba(255, 55, 127, 1)' : 'rgba(152, 159, 219, 1)'};
 `;
 
 export const Submit = styled.View`
@@ -124,7 +128,6 @@ export const Button = styled.View`
     z-index:5;
 `;
 
-
 export const SubmitText = styled(Text)`
   position: relative;
   font-size: 16px;
@@ -138,7 +141,8 @@ export const AlertText = styled(Text)`
   font-size: 10px;
   line-height: 48px;
   font-weight: 400;
-  color: ${(props) => (props.validation ? 'rgba(152, 159, 219, 1)': 'rgba(255, 55, 127, 1)')};
+  color: ${(props) =>
+    props.validation ? 'rgba(152, 159, 219, 1)' : 'rgba(255, 55, 127, 1)'};
   margin-left: 16px;
 `;
 
@@ -148,7 +152,7 @@ export const FooterText = styled(Text)`
   font-weight: 400;
   text-align: center;
   z-index: 3;
-  color : rgba(255, 255, 255, 1);
+  color: rgba(255, 255, 255, 1);
 `;
 
 export const FooterLink = styled(FooterText)`

@@ -38,6 +38,7 @@
     "@types/enzyme-adapter-react-16": "^1.0.6",
     "@types/react": "^17.0.2",
     "@types/react-native": "^0.63.50",
+    "@types/react-native-vector-icons": "^6.4.6",
     "babel-jest": "^25.1.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.6",
@@ -53,25 +54,23 @@
   },
   "jest": {
     "preset": "react-native",
-  
     "transform": {
-    "^.+\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js",
-    "\\.(ts|tsx)$": "ts-jest"
-  },
-  
+      "^.+\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js",
+      "\\.(ts|tsx)$": "ts-jest"
+    },
     "globals": {
-    "ts-jest": {
-      "tsConfig": "tsconfig.jest.json"
-    }
-  },
-  "moduleFileExtensions": [
-    "ts",
-    "tsx",
-    "js"
-  ],
-  "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
-  "setupFiles": [
-    "./node_modules/react-native-gesture-handler/jestSetup.js"
-  ]
+      "ts-jest": {
+        "tsConfig": "tsconfig.jest.json"
+      }
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "setupFiles": [
+      "./node_modules/react-native-gesture-handler/jestSetup.js"
+    ]
   }
 }
