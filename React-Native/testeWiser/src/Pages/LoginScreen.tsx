@@ -3,9 +3,9 @@ import {StyleSheet, TouchableOpacity, View} from 'react-native';
 import Icons from 'react-native-vector-icons/AntDesign';
 import {DoLogin} from '../store/ducks/actions';
 import {useSelector, useDispatch} from 'react-redux';
-import Background from '../Components/Background';
-import ButtonCard from '../Components/ButtonCard';
-import Footer from '../Components/Footer';
+import Background from '../Components/Login/Background';
+import ButtonCard from '../Components/Login/ButtonCard';
+import Footer from '../Components/Login/Footer';
 import {
   Container,
   Title,
@@ -17,7 +17,7 @@ import {
   FormInput,
   AlertText,
   LoginFeedback,
-} from '../Styles/StylesDefault';
+} from '../Styles/GlobalStyles';
 import {Login} from '../store/ducks/types';
 
 interface emailProps {

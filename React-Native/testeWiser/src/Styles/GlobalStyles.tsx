@@ -69,12 +69,6 @@ export const TitleCard = styled.View`
   height: 64px;
 `;
 
-export const BackImage = styled.View`
-  position: absolute;
-  justify-content: center;
-  background: rgba(152, 159, 219, 1);
-  width: 100%;
-`;
 
 export const TextInput = styled.TextInput`
   height: 50px;
@@ -106,36 +100,6 @@ export const FormInput = styled.TextInput`
     props.formatError ? 'rgba(255, 55, 127, 1)' : 'rgba(152, 159, 219, 1)'};
 `;
 
-export const Submit = styled.View`
-  position: relative;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-`;
-
-export const Button = styled.View`
-    height: 48px;
-    width: 168px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 8px;
-    position: relative;
-    top: -40px
-    background: rgba(255, 255, 255, 1);
-    overflow: hidden;
-    z-index:5;
-`;
-
-export const SubmitText = styled(Text)`
-  position: relative;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 1)
-  text-transform: uppercase;
-`;
-
 export const AlertText = styled(Text)`
   font-size: 10px;
   line-height: 48px;
@@ -143,17 +107,4 @@ export const AlertText = styled(Text)`
   color: ${(props) =>
     props.validation ? 'rgba(152, 159, 219, 1)' : 'rgba(255, 55, 127, 1)'};
   margin-left: 16px;
-`;
-
-export const FooterText = styled(Text)`
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 400;
-  text-align: center;
-  z-index: 3;
-  color: rgba(255, 255, 255, 1);
-`;
-
-export const FooterLink = styled(FooterText)`
-  text-decoration: underline;
 `;
