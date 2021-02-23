@@ -1,6 +1,6 @@
 import React, {FunctionComponent} from 'react';
 import {StyleSheet, TouchableOpacity} from 'react-native';
-import {Button, Submit, SubmitText} from '../../Styles/Login/ButtonCardStyles';
+import {Button, Submit, SubmitText} from './Styles';
 import LinearGradient from 'react-native-linear-gradient';
 
 interface FunctionProps {

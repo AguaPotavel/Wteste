@@ -2,6 +2,19 @@ import styled from 'styled-components';
 
 import { Text } from '../../Styles/GlobalStyles';
 
+
+interface inputProps {
+    formatError: boolean;
+}
+
+interface TextProps {
+    validation: boolean;
+}
+
+interface ModalProps {
+    isOpen: boolean;
+}
+
 export const LoginFormArea = styled.div`
     display: flex;
     background-color: white;
@@ -91,15 +104,18 @@ export const InputContainer = styled.div`
     width: 100%;
 `;
 
-export const FormInput = styled.input`
-    width: 100%;
+
+export const FormInput = styled.input<inputProps>`
     height: 48px;
     border-radius: 8px;
-    border: 1px solid rgba(152, 159, 219, 1);
+    border-color: ${(props) =>
+        props.formatError ? 'rgba(255, 55, 127, 1)' : 'rgba(152, 159, 219, 1)'};
+
+    padding-left: 17px;
+    color: rgba(152, 159, 219, 1);
     
-    &::placeholder {
-        padding-left: 17px;
-        color: rgba(152, 159, 219, 1);
+    &:focus {
+        outline: none;
     }
 `;
 
@@ -141,7 +157,7 @@ export const Card = styled.div`
     width: 45%;
     justify-content:center;
     align-items: center;
-    z-index: 9999;
+    z-index: 99;
     
     @media(max-width: 1000px) {
         width: 50%
@@ -216,6 +232,41 @@ export const Footer = styled.div`
     }
 `;
 
+export const AlertText = styled(Text)<TextProps>`
+  font-size: 10px;
+  line-height: 48px;
+  font-weight: 400;
+  color: ${(props) =>
+    props.validation ? 'rgba(255, 55, 127, 1)': 'rgba(152, 159, 219, 1)'};
+  margin-left: 16px;
+`;
 
+
+export const Modal = styled.div<ModalProps>`
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: ${(props) =>
+        props.isOpen ? 'flex' : 'none'};
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+`;
+
+export const ModalContent = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    margin-right: 20px;
+    width: 297px;
+    height: 297px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+`;
 
 

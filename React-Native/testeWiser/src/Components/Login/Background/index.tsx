@@ -1,6 +1,6 @@
 import React, {FunctionComponent} from 'react';
 import {StyleSheet, Image} from 'react-native';
-import {BackImage} from '../../Styles/Login/BackgroundStyles';
+import {BackImage} from './Styles';
 import LinearGradient from 'react-native-linear-gradient';
 
 const Background: FunctionComponent = () => {
@@ -15,7 +15,7 @@ const Background: FunctionComponent = () => {
         <Image
           style={{width: '100%'}}
           resizeMode={'cover'}
-          source={require('../../Assets/Images/background.png')}
+          source={require('../../../Assets/Images/background.png')}
         />
       </BackImage>
     </>

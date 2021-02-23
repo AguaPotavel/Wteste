@@ -1,11 +1,11 @@
 import React, {FunctionComponent, useState} from 'react';
 import {StyleSheet, TouchableOpacity, View} from 'react-native';
 import Icons from 'react-native-vector-icons/AntDesign';
-import {DoLogin} from '../store/ducks/actions';
+import {DoLogin} from '../../store/ducks/actions';
 import {useSelector, useDispatch} from 'react-redux';
-import Background from '../Components/Login/Background';
-import ButtonCard from '../Components/Login/ButtonCard';
-import Footer from '../Components/Login/Footer';
+import Background from '../../Components/Login/Background';
+import ButtonCard from '../../Components/Login/ButtonCard';
+import Footer from '../../Components/Login/Footer';
 import {
   Container,
   Title,
@@ -17,8 +17,8 @@ import {
   FormInput,
   AlertText,
   LoginFeedback,
-} from '../Styles/GlobalStyles';
-import {Login} from '../store/ducks/types';
+} from './Styles';
+import {Login} from '../../store/ducks/types';
 
 interface emailProps {
   value: string;

@@ -1,6 +1,6 @@
 import React, {FunctionComponent} from 'react';
 import {StyleSheet, TouchableOpacity, View} from 'react-native';
-import {FooterText, FooterLink} from '../../Styles/Login/FooterStyles';
+import {FooterText, FooterLink} from './Styles';
 
 const Footer: FunctionComponent = () => {
   return (

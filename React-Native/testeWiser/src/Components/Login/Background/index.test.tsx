@@ -1,8 +1,8 @@
 import React from 'react';
-import ButtonCard from './ButtonCard';
+import Background from './';
 import {create} from 'react-test-renderer';
 
-test('render button', () => {
-  const tree = create(<ButtonCard />);
+test('render Background', () => {
+  const tree = create(<Background />);
   expect(tree.toJSON()).toMatchSnapshot();
 });
