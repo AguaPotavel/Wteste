@@ -19,7 +19,7 @@ Esse repositório é Referente ao Teste da Wiser educação.
 Esse teste corresponde a desenvolver uma interface de Login utilizando as tecnologias requisitadas. Foi desenvolvido o aplicativo Mobile em React Native e também a aplicação online com React.
 
 Você pode acessar a interface web <a href="https://wiser-teste-ruan.herokuapp.com" target="_blank">aqui.</a>
-E fazer o download da aplicação **ANDROID**  <a href="" target="_blank">aqui.</a>
+E fazer o download da aplicação **ANDROID**  <a href="https://github.com/AguaPotavel/Wteste/raw/main/Release/release-v1.apk" target="_blank">aqui.</a>
 
 ## Tecnologias Utilizadas
 
@@ -78,7 +78,7 @@ Senha: `wisereducacao`
 
 ### Aplicação Android
 
-A versão do APK pode ser baixada <a href="#" target="_blank">aqui.</a>
+A versão do APK pode ser baixada <a href="https://github.com/AguaPotavel/Wteste/raw/main/Release/release-v1.apk" target="_blank">aqui.</a>
 
 Ou preferir pode ser feita a instalação e executada localmente seguindo os passos.
 
